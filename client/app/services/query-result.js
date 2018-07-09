@@ -478,8 +478,8 @@ function QueryResultService($resource, $timeout, $q) {
       return link;
     }
 
-    getName(queryName, fileType) {
-      return `${queryName.replace(' ', '_') + moment(this.getUpdatedAt()).format('_YYYY_MM_DD')}.${fileType}`;
+    getName(queryId, queryName, fileType) {
+      return `${queryId}_${queryName.replace(/ /g, '_') + moment(this.getUpdatedAt()).format('_YYYY_MM_DD')}.${fileType}`;
     }
 
     static get(dataSourceId, query, maxAge, queryId) {

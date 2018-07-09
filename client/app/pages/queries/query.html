@@ -144,11 +144,11 @@
 
   <div class="tile">
     <div class="t-header bg-ace">
-      <div class="pull-right">
-        <button class="btn btn-sm btn-default" ng-click="executeQuery()"
-                ng-disabled="queryExecuting || !canExecuteQuery()" title="Refresh Dataset"
-                ng-if="!sourceMode"><span
-          class="zmdi zmdi-refresh"></span></button>
+      <div class="pull-right">        
+          <button type="button" class="btn btn-primary btn-s" ng-click="executeQuery()"
+                ng-disabled="queryExecuting || !canExecuteQuery()" ng-if="!sourceMode">
+            <span class="zmdi zmdi-refresh"></span> Refresh
+          </button>
         <div class="btn-group" uib-dropdown>
           <button type="button" class="btn btn-default btn-sm dropdown-toggle"
                   ng-disabled="queryExecuting || !queryResult.getData()" aria-haspopup="true"
